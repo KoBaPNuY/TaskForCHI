@@ -21,7 +21,11 @@ NSArray* region;
     [super viewDidLoad];
     
     
-    region = [NSArray arrayWithObjects:@"Винницкая область",@"Волынская область", @"Днепропетровская область", @"Донецкая область", @"Житомирская область", nil];
+NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Areas" ofType:@"plist"]];
+
+
+NSArray *arrayList = [NSArray arrayWithArray:[dictRoot objectForKey:@"Винницкая область"]];
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -46,10 +50,7 @@ NSArray* region;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    
-    
-    
+
     return 0;
 }
 
