@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Винницкая область</key>
+	<array>
+		<string>Ямпольский район</string>
+		<string>Шаргородский район</string>
+		<string>Чечельницкий район</string>
+		<string>Черновицкий район</string>
+		<string>Хмельницкий район</string>
+	</array>
+	<key>Житомирская область</key>
+	<array>
+		<string>Чудновский район</string>
+		<string>Черняховский район</string>
+		<string>Красноармейский район</string>
+		<string>Ружинский район</string>
+		<string>Радомышльский район</string>
+	</array>
+	<key>Донецкая область</key>
+	<array>
+		<string>Ясиноватский район</string>
+		<string>Шахтерский район</string>
+		<string>Тельмановский район</string>
+		<string>Старобешевский район</string>
+		<string>Славянский район</string>
+	</array>
+	<key>Днепропетровская область</key>
+	<array>
+		<string>Юрьевский район</string>
+		<string>Широковский район</string>
+		<string>Царичанский район</string>
+		<string>Томаковский район</string>
+		<string>Софиевский район</string>
+	</array>
+	<key>Волынская область</key>
+	<array>
+		<string>Шацкий район</string>
+		<string>Турийский район</string>
+		<string>Старовыжевский район</string>
+		<string>Рожищенский район</string>
+		<string>Ратновский район</string>
+	</array>
+</dict>
+</plist>
