@@ -14,20 +14,17 @@
 
 @implementation RegionOfArea
 {
-NSArray* region;
+    NSArray* region1;
+    NSArray* region2;
+    NSArray* region3;
+    NSArray* region4;
+    NSArray* region5;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Areas" ofType:@"plist"]];
-
-
-NSArray *arrayList = [NSArray arrayWithArray:[dictRoot objectForKey:@"Винницкая область"]];
-    
-    
-    
+ 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -50,6 +47,7 @@ NSArray *arrayList = [NSArray arrayWithArray:[dictRoot objectForKey:@"Винни
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
 
     return 0;
 }

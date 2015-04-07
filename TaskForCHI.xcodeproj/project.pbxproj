@@ -89,6 +89,7 @@
 		1F6DDE491AD43FB9005E2201 /* TaskForCHI */ = {
 			isa = PBXGroup;
 			children = (
+				1F6DDE721AD44CD7005E2201 /* Areas.plist */,
 				1F6DDE761AD457E9005E2201 /* AreasOfUkraine.h */,
 				1F6DDE771AD457E9005E2201 /* AreasOfUkraine.m */,
 				1F6DDE791AD45864005E2201 /* RegionOfArea.h */,
@@ -100,7 +101,6 @@
 				1F6DDE541AD43FB9005E2201 /* Main.storyboard */,
 				1F6DDE571AD43FB9005E2201 /* Images.xcassets */,
 				1F6DDE591AD43FB9005E2201 /* LaunchScreen.xib */,
-				1F6DDE721AD44CD7005E2201 /* Areas.plist */,
 				1F6DDE4A1AD43FB9005E2201 /* Supporting Files */,
 			);
 			path = TaskForCHI;

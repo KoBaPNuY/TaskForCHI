@@ -15,22 +15,28 @@
 
 @implementation AreasOfUkraine
 {
-    NSArray* Areas;
+    NSArray* arrayList;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    Areas = [NSArray arrayWithObjects:@"Винницкая область",@"Волынская область", @"Днепропетровская область", @"Донецкая область", @"Житомирская область", nil];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Areas" ofType:@"plist"]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSArray *arrayList = [dictRoot objectForKey:@"AreaName"];
+   
+    NSLog(@"%@", arrayList);
+    
+    
+   // Areas = [NSArray arrayWithObjects:@"Винницкая область",@"Волынская область", @"Днепропетровская область", @"Донецкая область", @"Житомирская область", nil];
+    
+    
+    
 
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +54,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [Areas count];
+    return [arrayList count];
 }
 
 
@@ -62,54 +68,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = [Areas objectAtIndex:indexPath.row];
+    cell.textLabel.text = [arrayList objectAtIndex:indexPath.row];
     
     return cell;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -120,7 +84,7 @@
     {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         RegionOfArea* destViewController = segue.destinationViewController;
-        destViewController.regionName = [Areas objectAtIndex:indexPath.row];
+        destViewController.regionName = [arrayList objectAtIndex:indexPath.row];
         destViewController.title = destViewController.regionName;
     }
 }
